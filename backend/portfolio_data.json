@@ -1,0 +1,95 @@
+{
+    "personal": {
+        "name": "Lavanuru Aruna",
+        "role": "AI Engineer",
+        "tagline": "Building intelligent systems for a smarter future.",
+        "bio": "I'm a 2nd-year student passionate about Artificial Intelligence and Machine Learning. My journey involves deep diving into neural networks, building creative AI products, and solving real-world problems through technology.",
+        "email": "arunalavanuru1@gmail.com",
+        "social": {
+            "github": "https://github.com/aruna-31",
+            "linkedin": "https://www.linkedin.com/in/lavanuru-aruna-700243335/",
+            "leetcode": "https://leetcode.com/u/_Aruna_313/"
+        }
+    },
+    "skills": [
+        {
+            "category": "Programming",
+            "items": [
+                "Python",
+                "C",
+                "Java"
+            ],
+            "icon": "Code2"
+        },
+        {
+            "category": "AI & ML",
+            "items": [
+                "NumPy",
+                "Pandas"
+            ],
+            "icon": "Brain"
+        },
+        {
+            "category": "Tools & Platforms",
+            "items": [
+                "VS Code",
+                "Git & GitHub",
+                "Leetcode",
+                "Google Colab",
+                "Kaggle"
+            ],
+            "icon": "Terminal"
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "Smart Sense AI",
+            "description": "Smart Sense AI is an advanced AI-powered communication assistant designed to help students and professionals generate excuses, apologies, professional emails, letters, medical explanations, and personalized learning roadmaps. Built with React + FastAPI + Gemini 1.5 Pro, the system delivers fast, context-aware, human-like responses with customizable tones.",
+            "tags": [
+                "FastAPI",
+                "Python",
+                "React"
+            ],
+            "links": {
+                "demo": "#",
+                "code": "https://github.com/aruna-31/smart-sense-ai"
+            }
+        },
+        {
+            "id": 2,
+            "title": "AI Driven Story Teller",
+            "description": "An advanced AI-powered storytelling platform that generates creative stories, game narratives, and educational content with just a prompt. Built using modern JavaScript tooling and Gemini AI, this project provides unique story outputs for different user needs — entertainment, gaming, and learning.",
+            "tags": [
+                "NLP",
+                "Generative AI",
+                "React",
+                "FastAPI"
+            ],
+            "links": {
+                "demo": "https://fluffy-cuchufli-829b98.netlify.app/",
+                "code": "#"
+            }
+        }
+    ],
+    "timeline": [
+        {
+            "year": "2023",
+            "title": "Started Journey",
+            "description": "Enrolled in B.Tech and began exploring the world of computer science and programming basics.",
+            "icon": "BookOpen"
+        },
+        {
+            "year": "2024",
+            "title": "AI Exploration",
+            "description": "Deepened knowledge in Data Structures and Algorithms. Started building projects like Smart Sense AI and AI Story Generator.",
+            "icon": "Rocket"
+        },
+        {
+            "year": "2025 (Goal)",
+            "title": "Advanced Research",
+            "description": "Planning to specialize in Deep Learning and contribute to open-source AI models.",
+            "icon": "Brain"
+        }
+    ]
+}

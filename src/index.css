@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-slate-200 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-bold;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+  
+  .glass-card {
+    @apply bg-dark-lighter/50 backdrop-blur-lg border border-white/10;
+  }
+  
+  .neon-border {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5), inset 0 0 5px rgba(59, 130, 246, 0.2);
+  }
+}
