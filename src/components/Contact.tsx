@@ -1,4 +1,4 @@
-import React { useState } from 'react';
+import React, { useState } from 'react';
 import type { FormEvent } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioData } from '../content/portfolioData';
@@ -8,7 +8,8 @@ const Contact = () => {
     const { personal } = portfolioData;
     const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
 
-    const handleSubmit = (e: FormEvent) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+
         e.preventDefault();
         setFormState('submitting');
 
