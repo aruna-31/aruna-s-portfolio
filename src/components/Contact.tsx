@@ -1,4 +1,5 @@
-import { useState, FormEvent } from 'react';
+import React { useState } from 'react';
+import type { FormEvent } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioData } from '../content/portfolioData';
 import { Mail, Send, CheckCircle2, ChevronRight } from 'lucide-react';
