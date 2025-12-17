@@ -12,7 +12,7 @@ export const portfolioData = {
             linkedin: "https://www.linkedin.com/in/lavanuru-aruna-700243335/",
             leetcode: "https://leetcode.com/u/_Aruna_313/"
         },
-        resume: "/resume.pdf"
+        resume: "C:\Users\aruna\Downloads\ArunaLavanuru_Resume.pdf"
     },
     skills: [
         {
