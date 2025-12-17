@@ -41,7 +41,7 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                     className="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-sm"
                 >
-                    <span className="text-secondary text-sm font-semibold tracking-wider">FUTURE AI ENGINEER</span>
+                    <span className="text-secondary text-sm font-semibold tracking-wider"> AI ENGINEER</span>
                 </motion.div>
 
                 <motion.h1
@@ -78,9 +78,14 @@ const Hero = () => {
                         </span>
                     </button>
 
-                    <button className="px-8 py-3 border border-white/10 rounded-full font-semibold text-slate-300 hover:bg-white/5 hover:text-white transition-all flex items-center gap-2 justify-center hover:border-white/20">
+                    <a
+                        href={personal.resume}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-8 py-3 border border-white/10 rounded-full font-semibold text-slate-300 hover:bg-white/5 hover:text-white transition-all flex items-center gap-2 justify-center hover:border-white/20"
+                    >
                         <Download size={18} /> Download Resume
-                    </button>
+                    </a>
                 </motion.div>
 
                 {/* Social Links in Hero for better visibility */}

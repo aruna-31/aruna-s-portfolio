@@ -11,7 +11,8 @@ export const portfolioData = {
             github: "https://github.com/aruna-31",
             linkedin: "https://www.linkedin.com/in/lavanuru-aruna-700243335/",
             leetcode: "https://leetcode.com/u/_Aruna_313/"
-        }
+        },
+        resume: "/resume.pdf"
     },
     skills: [
         {
