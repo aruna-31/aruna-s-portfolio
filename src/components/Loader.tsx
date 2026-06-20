@@ -14,7 +14,7 @@ const Loader = ({ onComplete }: LoaderProps) => {
                     transition={{ duration: 0.8 }}
                     className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
                 >
-                    Aruna's AI Portfolio
+                    Aruna's Portfolio
                 </motion.h1>
 
                 <div className="relative h-2 bg-dark-lighter rounded-full overflow-hidden">
@@ -33,7 +33,7 @@ const Loader = ({ onComplete }: LoaderProps) => {
                     transition={{ delay: 0.5 }}
                     className="mt-2 text-sm text-slate-400 font-mono"
                 >
-                    Initializing neural networks...
+                    Initializing...
                 </motion.p>
             </div>
         </div>

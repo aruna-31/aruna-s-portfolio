@@ -52,7 +52,6 @@
                 "React"
             ],
             "links": {
-                "demo": "#",
                 "code": "https://github.com/aruna-31/smart-sense-ai"
             }
         },
@@ -67,8 +66,7 @@
                 "FastAPI"
             ],
             "links": {
-                "demo": "https://fluffy-cuchufli-829b98.netlify.app/",
-                "code": "#"
+                "demo": "https://project-11-theta.vercel.app/"
             }
         }
     ],

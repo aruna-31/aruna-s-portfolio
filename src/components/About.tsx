@@ -27,11 +27,11 @@ const About = () => {
 
                                 <div className="mt-8 pt-8 border-t border-white/5 flex flex-wrap gap-12 justify-center md:justify-start">
                                     <div>
-                                        <h3 className="text-4xl font-bold text-primary mb-1">2+</h3>
-                                        <p className="text-slate-400 text-sm">Years Coding</p>
+                                        <h3 className="text-4xl font-bold text-primary mb-1">1</h3>
+                                        <p className="text-slate-400 text-sm">Year of Coding</p>
                                     </div>
                                     <div>
-                                        <h3 className="text-4xl font-bold text-secondary mb-1">5+</h3>
+                                        <h3 className="text-4xl font-bold text-secondary mb-1">3+</h3>
                                         <p className="text-slate-400 text-sm">Projects Built</p>
                                     </div>
                                 </div>

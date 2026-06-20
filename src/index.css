@@ -22,10 +22,33 @@
   }
   
   .glass-card {
-    @apply bg-dark-lighter/50 backdrop-blur-lg border border-white/10;
+    @apply bg-dark-lighter/50 backdrop-blur-xl border border-white/10;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%);
+  }
+  
+  .glass-card:hover {
+    @apply border-white/20;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.7) 100%);
   }
   
   .neon-border {
     box-shadow: 0 0 5px rgba(59, 130, 246, 0.5), inset 0 0 5px rgba(59, 130, 246, 0.2);
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .premium-shadow {
+    box-shadow: 0 10px 40px -10px rgba(139, 92, 246, 0.3);
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.4);
   }
 }
