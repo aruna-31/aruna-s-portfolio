@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { ExternalLink, Github, Award, Trophy, TrendingUp, Users, Zap } from 'lucide-react';
-import ImageGallery from './ImageGallery';
 
 interface ProjectCardProps {
     project: any;
@@ -10,9 +10,10 @@ interface ProjectCardProps {
 const ProjectCard = ({ project, index }: ProjectCardProps) => {
     const isEven = index % 2 === 0;
     const isFlagship = project.id === 2;
+    const [featuredImageIndex, setFeaturedImageIndex] = useState(0);
 
     // Use actual images from project data or fallback to placeholder
-    const images = project.images || Array.from({ length: project.imageCount }, (_, i) => 
+    const images = project.images || Array.from({ length: project.imageCount }, (_, i) =>
         `https://images.unsplash.com/photo-${1550000000000 + project.id * 1000 + i}?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80`
     );
 
@@ -22,30 +23,75 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${isEven ? '' : 'lg:flex-row-reverse'}`}
+            className={images && images.length > 0
+                ? `grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${isEven ? '' : 'lg:flex-row-reverse'}`
+                : 'max-w-4xl mx-auto'
+            }
         >
-            {/* Image Gallery */}
-            <div className={isEven ? 'order-1' : 'order-2'}>
-                <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
-                    className="relative"
-                >
-                    {isFlagship && (
+            {/* Image Gallery - Only render if images exist */}
+            {images && images.length > 0 && (
+                <div className={isEven ? 'order-1' : 'order-2'}>
+                    <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.3 }}
+                        className="relative"
+                    >
+                        {isFlagship && (
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                className="absolute -top-4 -left-4 z-10 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full font-bold text-sm shadow-lg"
+                            >
+                                ⭐ Flagship Project
+                            </motion.div>
+                        )}
+                        {/* Large Featured Image */}
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            className="absolute -top-4 -left-4 z-10 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full font-bold text-sm shadow-lg"
+                            transition={{ duration: 0.5 }}
+                            className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 mb-4"
                         >
-                            ⭐ Flagship Project
+                            <img
+                                src={images[featuredImageIndex]}
+                                alt={`${project.title} - Image ${featuredImageIndex + 1}`}
+                                className="w-full h-auto object-cover"
+                                loading="eager"
+                            />
                         </motion.div>
-                    )}
-                    <ImageGallery images={images} projectName={project.title} />
-                </motion.div>
-            </div>
+
+                        {/* Thumbnails */}
+                        {images.length > 1 && (
+                            <div className="grid grid-cols-3 gap-3">
+                                {images.map((image: string, idx: number) => (
+                                    <motion.button
+                                        key={idx}
+                                        onClick={() => setFeaturedImageIndex(idx)}
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: idx * 0.1 }}
+                                        className={`relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 ${
+                                            featuredImageIndex === idx
+                                                ? 'ring-2 ring-primary ring-offset-2 ring-offset-dark scale-105'
+                                                : 'hover:scale-105 hover:shadow-xl'
+                                        }`}
+                                    >
+                                        <img
+                                            src={image}
+                                            alt={`${project.title} - Thumbnail ${idx + 1}`}
+                                            className="w-full h-24 object-cover"
+                                            loading="eager"
+                                        />
+                                    </motion.button>
+                                ))}
+                            </div>
+                        )}
+                    </motion.div>
+                </div>
+            )}
 
             {/* Content */}
-            <div className={isEven ? 'order-2' : 'order-1'}>
+            <div className={images && images.length > 0 ? (isEven ? 'order-2' : 'order-1') : 'w-full text-center'}>
                 {/* Achievement Badge */}
                 {project.achievement && (
                     <motion.div

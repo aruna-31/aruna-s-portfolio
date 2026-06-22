@@ -127,8 +127,8 @@ export const portfolioData = {
             techStack: ["Python", "IoT", "Embedded Systems"],
             imageCount: 2,
             images: [
-                "/projects/water-distribution-system/samved2.jpg",
-                "/projects/water-distribution-system/leakd.jpg"
+                "/projects/water distribution system/samved2.jpg",
+                "/projects/water distribution system/leakd.jpg"
             ],
             links: {
                 code: "https://github.com/aruna-31/smart_water_monitoring"
@@ -142,7 +142,7 @@ export const portfolioData = {
                 "Predictive Analytics",
                 "Machine Learning Models",
                 "Data Visualization",
-                "Placement Insights"
+                "Placement Insights"   
             ],
             performance: "79% Prediction Accuracy",
             techStack: ["Python", "Pandas", "NumPy", "Scikit-Learn", "Streamlit", "Random Forest Regressor"],
@@ -181,11 +181,7 @@ export const portfolioData = {
                 "Google Gemini AI",
                 "Vite"
             ],
-            images: [
-                "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            ],
+            
             links: {
                 demo: "https://fluffy-cuchufli-829b98.netlify.app/",
                 code: "https://github.com/aruna-31/story_generator"
